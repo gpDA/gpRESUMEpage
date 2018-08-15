@@ -1,0 +1,6 @@
+- venv gpResume
+- pip install django==2.1
+
+- SUPERUSER
+    - username : gp
+    - password : geonpyung93   
