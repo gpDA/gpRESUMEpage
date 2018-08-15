@@ -6,7 +6,15 @@
 <h2>Sign up</h2>
 <form method="post">
   {% csrf_token %}
-  {{ form.as_p }}
+    <form action="/SignUp/" method="post">
+        {% for field in form %}
+            <div class="fieldWrapper">
+                {{ field.errors }}
+                {{ field.label_tag }} {{ field }}
+            </div>
+        {% endfor %}
+        <p><input type="submit" value="Send message" /></p>
+    </form>
   <button type="submit">Sign up</button>
 </form>
 {% endblock %}
