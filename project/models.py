@@ -1,17 +1,12 @@
-from django.contrib.auth.models import AbstractUser
 from django.db import models
+from project.models import CustomUser
 from django.urls import reverse
 from django.db.models.signals import pre_save
 from django.utils.text import slugify
 from ckeditor_uploader.fields import RichTextUploadingField
 
-class CustomUser(AbstractUser):
-    age = models.CharField(max_length=2, default='10')
-    image = models.CharField(max_length=256, default='https://api.adorable.io/avatars/285/abott@adorable')
-    def __str__(self):
-        return self.email
 
-class Posten(models.Model):
+class Projecten(models.Model):
     # 1 - M CustomUser
     creator = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  
     title = models.CharField(max_length=200, blank=True)
@@ -31,12 +26,12 @@ class Posten(models.Model):
 
     def save(self):
         self.slug = slugify(self.title)
-        super(Posten, self).save()
+        super(Projecten, self).save()
         
     class Meta:
         ordering = ['-timestamp','-updated']
 
-class Postko(models.Model):
+class Projectko(models.Model):
 
     # 1 - M CustomUser
     creator = models.ForeignKey(CustomUser, on_delete=models.CASCADE)      
@@ -57,7 +52,7 @@ class Postko(models.Model):
 
     def save(self):
         self.slug = slugify(self.title)
-        super(Postko, self).save()
+        super(Projectko, self).save()
         
     class Meta:
-        ordering = ['-timestamp','-updated']        
+        ordering = ['-timestamp','-updated']   
