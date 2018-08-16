@@ -2,4 +2,4 @@
 - subscriber email
 - registration confirmation email
 - model schema user(1) post(m) comment(m)
-- ckeditor integration
+- X ckeditor integration X

@@ -1,6 +1,8 @@
 - venv gpResume
 - pip install django==2.1
 - pip install social-auth-app-django
+- pip install django-ckeditor
+- pip install Pillow
 
 - SUPERUSER
     - username : gp

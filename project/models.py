@@ -1,5 +1,5 @@
 from django.db import models
-from project.models import CustomUser
+from posting.models import CustomUser
 from django.urls import reverse
 from django.db.models.signals import pre_save
 from django.utils.text import slugify
