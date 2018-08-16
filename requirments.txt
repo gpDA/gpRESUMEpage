@@ -1,5 +1,6 @@
 - venv gpResume
 - pip install django==2.1
+- pip install social-auth-app-django
 
 - SUPERUSER
     - username : gp

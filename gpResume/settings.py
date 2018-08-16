@@ -30,6 +30,9 @@ INSTALLED_APPS = [
 
     #LOCAL
     'posting',
+
+    #3rd PARTY
+    'social_django',
 ]
 AUTH_USER_MODEL = 'posting.CustomUser'
 
@@ -41,6 +44,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'gpResume.urls'
@@ -56,12 +61,31 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
 ]
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.github.GithubOAuth2',
+    'social_core.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+#GITHUB
+SOCIAL_AUTH_GITHUB_KEY = '4305463e2fdd33e2d2c8'
+SOCIAL_AUTH_GITHUB_SECRET = 'f4d834edf06e365bcaa5f79f90b8c9495f2987bc'
+
+#FB
+SOCIAL_AUTH_FACEBOOK_KEY = '374979729704955'
+SOCIAL_AUTH_FACEBOOK_SECRET = '17bc53b89c0d4dd5a892bb486326ca3c'
+
+LOGIN_URL = 'home'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
+
 
 WSGI_APPLICATION = 'gpResume.wsgi.application'
 

@@ -10,5 +10,8 @@
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">login</a> |
   <a href="{% url 'signup' %}">signup</a>
+  <a href="{% url 'social:begin' 'github' %}">Login with Github</a>
+  <a href="{% url 'social:begin' 'facebook' %}">Login with FB</a>
 {% endif %}
 {% endblock %}
+
