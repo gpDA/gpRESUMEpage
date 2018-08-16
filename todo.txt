@@ -1,5 +1,5 @@
 - how to use S3 for the image repository
 - subscriber email
 - registration confirmation email
-- model schema user(1) post(m) comment(m)
+- X model schema user(1) post(m) comment(m) X
 - X ckeditor integration X

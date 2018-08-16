@@ -17,7 +17,6 @@ class Posten(models.Model):
     title = models.CharField(max_length=200, blank=True)
     number = models.IntegerField()
     slug = models.SlugField(unique=True)
-    tag = models.CharField(max_length=100, blank=True)
     content = RichTextUploadingField(config_name='default', null=True)
     order = models.IntegerField(blank=True, null=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
@@ -43,7 +42,6 @@ class Postko(models.Model):
     title = models.CharField(max_length=200, blank=True)
     number = models.IntegerField()
     slug = models.SlugField(unique=True)
-    tag = models.CharField(max_length=100, blank=True)
     content = RichTextUploadingField(config_name='default', null=True)
     order = models.IntegerField(blank=True, null=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
@@ -61,3 +59,45 @@ class Postko(models.Model):
         
     class Meta:
         ordering = ['-timestamp','-updated']        
+
+class PostCommenten(models.Model):
+    creator = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  
+    post = models.ForeignKey('Posten', on_delete=models.CASCADE, related_name='post_comment_en')
+    text = models.TextField()
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
+    approved_comment = models.BooleanField(default=False)
+
+    def approve(self):
+        self.approved_comment = True
+        self.save()
+
+    def __str__(self):
+        return self.text
+
+class PostCommentko(models.Model):
+    creator = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  
+    post = models.ForeignKey('Postko', on_delete=models.CASCADE, related_name='post_comment_en')
+    text = models.TextField()
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
+    approved_comment = models.BooleanField(default=False)
+
+    def approve(self):
+        self.approved_comment = True
+        self.save()
+
+    def __str__(self):
+        return self.text        
+
+class PostTagko(models.Model):
+    post = models.ForeignKey('Postko', on_delete=models.CASCADE, related_name='project_tag_en')
+    tag = models.CharField(max_length=100, blank=True)
+
+    def __str__(self):
+        return self.tag    
+        
+class PostTagen(models.Model):
+    post = models.ForeignKey('Posten', on_delete=models.CASCADE, related_name='project_tag_en')
+    tag = models.CharField(max_length=100, blank=True)   
+
+    def __str__(self):
+        return self.tag    

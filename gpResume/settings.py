@@ -31,6 +31,7 @@ INSTALLED_APPS = [
 
     #LOCAL
     'posting',
+    'project',
 
     #3rd PARTY
     'social_django',

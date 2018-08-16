@@ -12,7 +12,6 @@ class Projecten(models.Model):
     title = models.CharField(max_length=200, blank=True)
     number = models.IntegerField()
     slug = models.SlugField(unique=True)
-    tag = models.CharField(max_length=100, blank=True)
     content = RichTextUploadingField(config_name='default', null=True)
     order = models.IntegerField(blank=True, null=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
@@ -38,7 +37,6 @@ class Projectko(models.Model):
     title = models.CharField(max_length=200, blank=True)
     number = models.IntegerField()
     slug = models.SlugField(unique=True)
-    tag = models.CharField(max_length=100, blank=True)
     content = RichTextUploadingField(config_name='default', null=True)
     order = models.IntegerField(blank=True, null=True)
     updated = models.DateTimeField(auto_now=True, auto_now_add=False)
@@ -56,3 +54,45 @@ class Projectko(models.Model):
         
     class Meta:
         ordering = ['-timestamp','-updated']   
+
+class ProCommenten(models.Model):
+    creator = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  
+    project = models.ForeignKey('Projecten', on_delete=models.CASCADE, related_name='project_comment_en')
+    text = models.TextField()
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
+    approved_comment = models.BooleanField(default=False)
+
+    def approve(self):
+        self.approved_comment = True
+        self.save()
+
+    def __str__(self):
+        return self.text
+
+class ProCommentko(models.Model):
+    creator = models.ForeignKey(CustomUser, on_delete=models.CASCADE)  
+    project = models.ForeignKey('Projectko', on_delete=models.CASCADE, related_name='project_comment_en')
+    text = models.TextField()
+    timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
+    approved_comment = models.BooleanField(default=False)
+
+    def approve(self):
+        self.approved_comment = True
+        self.save()
+
+    def __str__(self):
+        return self.text        
+
+class ProTagko(models.Model):
+    project = models.ForeignKey('Projectko', on_delete=models.CASCADE, related_name='project_tag_en')
+    tag = models.CharField(max_length=100, blank=True)
+
+    def __str__(self):
+        return self.tag    
+
+class ProTagen(models.Model):
+    project = models.ForeignKey('Projecten', on_delete=models.CASCADE, related_name='project_tag_en')
+    tag = models.CharField(max_length=100, blank=True)    
+
+    def __str__(self):
+        return self.tag    
