@@ -1,0 +1,2 @@
+- ckeditor integration
+- how to use S3 for the image repository
