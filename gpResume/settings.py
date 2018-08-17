@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
 ]
 AUTH_USER_MODEL = 'posting.CustomUser'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
