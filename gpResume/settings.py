@@ -41,11 +41,11 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'posting.CustomUser'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'gl1144@nyu.edu'
-EMAIL_HOST_PASSWORD = 'Gwnfv5511!@'
+EMAIL_HOST_USER = 'geonpyung@gmail.com'
+EMAIL_HOST_PASSWORD = 'geonpyung93'
 EMAIL_PORT = 587
-EMAIL_USE_TSL = True
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -83,6 +83,7 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.github.GithubOAuth2',
     'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
+    'games.backend.EmailorUsernameAuthBackend',
 )
 
 #GITHUB
