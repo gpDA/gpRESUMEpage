@@ -41,6 +41,12 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'posting.CustomUser'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'gl1144@nyu.edu'
+EMAIL_HOST_PASSWORD = 'Gwnfv5511!@'
+EMAIL_PORT = 587
+EMAIL_USE_TSL = True
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
