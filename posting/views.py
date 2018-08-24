@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm
 from .models import CustomUser
 
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import login, authenticate
 from django.contrib.sites.shortcuts import get_current_site
 from django.utils.encoding import force_bytes, force_text
@@ -12,32 +12,6 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.template.loader import render_to_string
 from .tokens import account_activation_token
 from django.core.mail import EmailMessage
-
-'''
-def SignUp(request):
-    if request.method == 'POST':
-        form = CustomUserCreationForm(request.POST)
-        if form.is_valid():
-            email = request.POST['email']
-            uid = str(uuid.uuid4())
-            user = form.save(commit=False)
-            user.is_active = False
-            url = request.build_absolute_uri(f'login?uid={uid}')
-            send_mail(
-                'Your login link',
-                f'Use this link to log in:\n\n{url}',
-                'noreply',
-                [email],
-            )
-        return render(request, 'account_activation_sent.html')
-    
-def login(request):
-    uid = request.GET.get('uid')
-    user = authenticate(uid=uid)
-    if user is not None:
-        auth_login(request, user)
-    return redirect('/')
-'''    
 
 
 from django.contrib.sites.shortcuts import get_current_site
@@ -93,3 +67,15 @@ def activate(request, uidb64, token):
     else:
         return render(request, 'error.html')
 
+def password_reset(request):
+    if request.method == 'POST':
+        return HttpResponseRedirect("/password_reset/done")
+    return render(request, 'registration/password_reset_form.html')
+
+
+def password_reset_done(request):
+    return render(request, 'registration/password_reset_done.html')
+def password_reset_confirm(request):
+    return render(request, 'registration/password_reset_confirm.html')    
+def password_reset_complete(request):
+    return render(request, 'registration/password_reset_complete.html')    
