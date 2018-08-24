@@ -66,24 +66,16 @@ def activate(request, uidb64, token):
         return render(request, 'registration/signup_success.html')
     else:
         return render(request, 'error.html')
-
+'''
 def password_reset(request):
     if request.method == 'POST':
         return HttpResponseRedirect("/password_reset/done")
     return render(request, 'registration/password_reset_form.html')
 
-<<<<<<< HEAD
-'''
-=======
-
->>>>>>> 10f4fda71efdceb6875e4ad60acb7a775158bf92
 def password_reset_done(request):
     return render(request, 'registration/password_reset_done.html')
 def password_reset_confirm(request):
     return render(request, 'registration/password_reset_confirm.html')    
 def password_reset_complete(request):
     return render(request, 'registration/password_reset_complete.html')    
-<<<<<<< HEAD
 '''
-=======
->>>>>>> 10f4fda71efdceb6875e4ad60acb7a775158bf92
