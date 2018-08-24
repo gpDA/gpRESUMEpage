@@ -1,7 +1,20 @@
-- how to use S3 for the image repository
+
+- bootstrap set up
+- landing page
+    - navbar & structure : 
+        1. scroll down navb size decrease
+        2. navigation in the middle as a grid picture (hover scale(1.2))
+        3. navigation menu (section is divided by <hr>) 1. Timeline (horizontal) 
+            2. school (grid : picture on the left and my poisition on the right and click my position disappears on the job description (courses that I took) appears)  
+            3. work experience (same as school) 4. Projects (carousel with navigation arrow) 5. Posts
+            4. Extra curriculum (my own pictures with no wrap picture carousel)  
+        4. image on the right and the text (short & big text) on the left for the header
+        4. 
+- slugify for post & project
+- X how to use S3 for the image repository X
+- X how to upload ckeditor to repository X
 - X password reset X
 - X registration confirmation email X
-- slugify
 - X model schema user(1) post(m) comment(m) X
 - X ckeditor integration X
 - Python decouple for development
