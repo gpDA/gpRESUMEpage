@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/index.css' %}">
 </head>
 <body>
   <main>
     {% block content %}
+    <img src="{% static 'img/gp.png' %}" alt="">
     {% endblock %}
   </main>
 </body>

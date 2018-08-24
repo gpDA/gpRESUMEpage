@@ -5,6 +5,7 @@
 - pip install Pillow
 - pip install boto3 (boto3)
 - pip install django-storages (django-storages)
+- pip install Collectfast
 - SUPERUSER
     - username : gp
     - password : geonpyung93   

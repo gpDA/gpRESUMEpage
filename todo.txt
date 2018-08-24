@@ -4,6 +4,8 @@
 - slugify
 - X model schema user(1) post(m) comment(m) X
 - X ckeditor integration X
-
+- Python decouple for development
+    : https://simpleisbetterthancomplex.com/2015/11/26/package-of-the-week-python-decouple.html
+- python manage.py collectstatic    
 - LATER 
     : subscriber email
