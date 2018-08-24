@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 
 {% block title %}Home{% endblock %}
 
@@ -8,6 +9,7 @@
   <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
   <p>You are not logged in</p>
+  <img src="{% static 'img/gp.png' %}" alt="">
   <a href="{% url 'login' %}">login</a> |
   <a href="{% url 'signup' %}">signup</a>
   <a href="{% url 'social:begin' 'github' %}">Login with Github</a>
