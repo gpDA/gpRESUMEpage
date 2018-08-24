@@ -71,11 +71,11 @@ def password_reset(request):
     if request.method == 'POST':
         return HttpResponseRedirect("/password_reset/done")
     return render(request, 'registration/password_reset_form.html')
-'''
+
 def password_reset_done(request):
     return render(request, 'registration/password_reset_done.html')
 def password_reset_confirm(request):
     return render(request, 'registration/password_reset_confirm.html')    
 def password_reset_complete(request):
     return render(request, 'registration/password_reset_complete.html')    
-'''
+
