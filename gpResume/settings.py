@@ -39,13 +39,15 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
 ]
 AUTH_USER_MODEL = 'posting.CustomUser'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'geonpyung@gmail.com'
-EMAIL_HOST_PASSWORD = 'geonpyung93'
+EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
+EMAIL_HOST_USER = 'GP site admin'
+EMAIL_HOST_PASSWORD = 'geonpyung93'
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'GP site <noreply@example.com>'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -83,7 +85,6 @@ AUTHENTICATION_BACKENDS = (
     'social_core.backends.github.GithubOAuth2',
     'social_core.backends.facebook.FacebookOAuth2',
     'django.contrib.auth.backends.ModelBackend',
-    'games.backend.EmailorUsernameAuthBackend',
 )
 
 #GITHUB
