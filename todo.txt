@@ -1,5 +1,7 @@
 - how to use S3 for the image repository
-- subscriber email
-- registration confirmation email
+- LATER subscriber email
+- password reset
+- X registration confirmation email X
+- slugify
 - X model schema user(1) post(m) comment(m) X
 - X ckeditor integration X
