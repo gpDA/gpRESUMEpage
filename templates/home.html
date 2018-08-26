@@ -5,28 +5,34 @@
 {% block content %}
 
 <nav class="fixed-top navbar navbar-expand-lg increase">
-    <div class="nav-items">
-      <img src="{% static 'img/gp.png' %}">
-    </div>  
-    <div class="nav-items">
-      <a class="nav-link" href="#">TimeLine</a>
-    </div>
-    <div class="nav-items">
-      <a class="nav-link" href="#">School</a>
-    </div>
-    <div class="nav-items">
-      <a class="nav-link" href="#">Work Experience</a>
-    </div>
-    <div class="nav-items">
-      <a class="nav-link" href="#">Projects</a>
-    </div>  
-    <div class="nav-items">
-      <a class="nav-link" href="#">Posts</a>
-    </div>                
-      
-      </span>
-    </div>
-  </nav>   
+  <div class="nav-items">
+    <img src="{% static 'img/gp.png' %}">
+  </div>  
+  <div class="nav-items">
+    <a class="nav-link" href="#timeline">TimeLine</a>
+  </div>
+  <div class="nav-items">
+    <a class="nav-link" href="#school">School</a>
+  </div>
+  <div class="nav-items">
+    <a class="nav-link" href="#experience">Work Experience</a>
+  </div>
+  <div class="nav-items">
+    <a class="nav-link" href="#projects">Projects</a>
+  </div>  
+  <div class="nav-items">
+    <a class="nav-link" href="#posts">Posts</a>
+  </div>                
+    
+    </span>
+  </div>
+</nav>
+<div class="contents">
+  <div class="container">
+    <!-- fade class -->
+
+  </div>
+</div> 
 
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
