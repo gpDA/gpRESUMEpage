@@ -15,3 +15,11 @@ AWS S3 set SUPERUSER
 - users with AWS Management Console access @ https://783440438148.signin.aws.amazon.com/console
 - ACCESS KEY ID : AKIAJ2WX7NPR4FV6A2VA
 - SECRET ACCESS KEY : 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
+
+
+
+3 colors to use
+- #20415f (blue)
+- #1c2825 (black)
+- #eee9cd (white)
+- #f9f9f9 (white white)

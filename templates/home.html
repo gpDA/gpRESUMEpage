@@ -1,19 +1,44 @@
 {% extends 'base.html' %}
+
 {% load staticfiles %}
 
-{% block title %}Home{% endblock %}
-
 {% block content %}
+
+<nav class="fixed-top navbar navbar-expand-lg increase">
+    <div class="nav-items">
+      <img src="{% static 'img/gp.png' %}">
+    </div>  
+    <div class="nav-items">
+      <a class="nav-link" href="#">TimeLine</a>
+    </div>
+    <div class="nav-items">
+      <a class="nav-link" href="#">School</a>
+    </div>
+    <div class="nav-items">
+      <a class="nav-link" href="#">Work Experience</a>
+    </div>
+    <div class="nav-items">
+      <a class="nav-link" href="#">Projects</a>
+    </div>  
+    <div class="nav-items">
+      <a class="nav-link" href="#">Posts</a>
+    </div>                
+      
+      </span>
+    </div>
+  </nav>   
+
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
   <p>You are not logged in</p>
-  <img src="{% static 'img/gp.png' %}" alt="">
+  <!-- <img src="{% static 'img/gp.png' %}" alt=""> -->
   <a href="{% url 'login' %}">login</a> |
   <a href="{% url 'signup' %}">signup</a>
   <a href="{% url 'social:begin' 'github' %}">Login with Github</a>
   <a href="{% url 'social:begin' 'facebook' %}">Login with FB</a>
 {% endif %}
+<div class="bottom"></div>
 {% endblock %}
 
