@@ -23,4 +23,7 @@
 - LATER 
     : subscriber email
 
+- scrollspy
+- fadein
+
 

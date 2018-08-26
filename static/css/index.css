@@ -64,3 +64,15 @@ nav.decrease{
     height: 500px;
     background-color: azure;
 }
+section{
+    opacity: 0;
+    transition: translate(0, 20px);
+    transition: all 1s;
+}
+section.fadein{
+    height: 500px;
+    background-color: aquamarine;
+    margin-bottom: 50px;
+    opacity: 1;
+    transform: translate(0, 0);
+}
