@@ -171,3 +171,56 @@ section.fadein{
 .col-img-right-1, .col-img-right-2{
     right: 10px;
 }
+#projects, #posts{
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.project-items{
+    display: inline-block;
+    transform: scale(1.2);
+    background-color: yellow;
+    min-width: 500px;
+    max-width: 500px;
+    height: 350px;
+    margin: 3em 5em;
+    border: 1px solid rgb(100%, 100%, 100%);
+    border: 1px solid rgba(100%, 100%, 100%, 0.8);
+    transition: all .2s ease-in-out;
+}
+.project-items:hover{
+    transform: scale(1.25);
+}
+#project-title{
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin: 0 auto;
+    text-align: center
+}
+.post-items{
+    display: inline-block;
+    transform: scale(1.2);
+    background-color: yellow;
+    min-width: 500px;
+    max-width: 500px;
+    height: 350px;
+    margin: 3em 5em;
+    border: 1px solid rgb(100%, 100%, 100%);
+    border: 1px solid rgba(100%, 100%, 100%, 0.8);
+    transition: all .2s ease-in-out;
+}
+.post-items:hover{
+    transform: scale(1.25);
+}
+#post-title{
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin: 0 auto;
+    text-align: center
+}
