@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;    
+    -webkit-box-sizing: border-box;    
 
 }
 nav{
@@ -62,7 +62,7 @@ nav.decrease{
 .contents{
     margin-top: 100px;
     height: 500px;
-    background-color: azure;
+    background-color: #f9f9f9;
 }
 section{
     opacity: 0;
@@ -70,9 +70,27 @@ section{
     transition: all 1s;
 }
 section.fadein{
-    height: 500px;
+    
     background-color: aquamarine;
     margin-bottom: 50px;
     opacity: 1;
     transform: translate(0, 0);
+}
+#head-image {
+    width: 100%;
+    max-height: 42em;
+    min-height: 42em;
+    -o-object-fit: fill;
+    object-fit: fill;
+    border-radius: 0em;
+    display:block;
+    background-size: fill;
+}
+#text-space h2{
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+.lists strong{
+    margin-left: 60px;
 }

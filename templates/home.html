@@ -6,7 +6,9 @@
 
 <nav class="fixed-top navbar navbar-expand-lg increase">
   <div class="nav-items">
+    <a href="/">
     <img src="{% static 'img/gp.png' %}">
+    </a>
   </div>  
   <div class="nav-items">
     <a class="nav-link" href="#timeline">TimeLine</a>
@@ -27,10 +29,134 @@
     </span>
   </div>
 </nav>
+
 <div class="contents">
   <div class="container">
+    <section id='header'>
+      <div class="row">
+        <div class="col-sm-6" id='img-space'>
+            <img id='head-image' src="{% static 'img/header_pic.jpg' %}" alt="">
+        </div>
+        <div class="col-sm-6" id='text-space'>
+            <h2>GP LEE</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam laborum iusto harum, dolorum facere reprehenderit et nemo debitis molestias velit eaque nostrum optio vitae perferendis assumenda quos. Illum, temporibus necessitatibus. lorem30</p>
+            <svg height="63" width="400">
+              <g>
+                <text x="20" y="30" fill="black" style='font: 20px sans-serif'>Programming Skills</text>
+                <text x="310" y="30" fill="black">(strong)</text>
+              <polygon points="340,40 340,60 370,50" style="fill:#f9f9f9;stroke:black;stroke-width:3" />
+              Sorry, your browser does not support inline SVG.
+              <line x1="0" y1="50" x2="340" y2="50" style="stroke:black;stroke-width:3" />
+            </g>
+            </svg>
+            <div class="lists">
+              <p>(Programming language)<br> <strong>Go  Ruby &emsp; &emsp; Java &emsp;   Python  </strong></p>
+              <p>(FrontEnd Development)<br> <strong style='margin-left:160px;'>HTML CSS Javascript</strong></p>
+              <p>(Javascript Framework)<br> <strong style='margin-left:110px;'> React &emsp;  D3 &emsp; &emsp;  jQuery</strong></p>
+              <p>(BackEnd Development)<br> <strong style='margin-left:60px;'> PHP  &emsp; &emsp; &emsp; ROR  &emsp; &emsp; Python(Django)</strong></p>
+              <p>(DBMS)<br> <strong style='margin-left:75px;'> MongoDB  &emsp; &emsp; PostgreSQL  MySQL</strong></p>
+            </div>
+          </div>        
+      </div>
+    </section>
+
     <section id='timeline' >
       <h1>timeline</h1>
+      {# TimeLine #}
+
+      <ul class="timeline">
+
+          {# Item1 #}
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                <span class="flag">U•Start</span>
+                <span class="time-wrapper"><span class="time">June. 2018 - present</span></span>
+              </div>
+              <div class="desc">U•Start is a.k.a LinkedIn for college students where students can highlight all their skills, portfolio, and past projects using built-in widgets such as Github, Youtube, Codepen. I am responsible for frontEnd implementation using HTML, CSS, Javascript &amp; fetching the backend data using Javascript &amp; Ajax. We are using Go &amp; ElasticSearch for the backend to provide faster and better fetching &emp; searching data. The Beta version is expected to launch by the september 2018   </div>
+            </div>
+          </li>
+          
+          {# Item2 #}
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                  <span class="flag">CollegPrep</span>
+                  <span class="time-wrapper"><span class="time">Jan. 2018 - May. 2018</span></span>
+              </div>
+              <div class="desc">CP's goal is to provide students with quality college preparatory services for free. I was responsible for implementing RESTful API using Django &amp; PostgreSQL, specifically payment gateway such as Stripe &amp; Social account registration using API tokenization</div>
+            </div>
+          </li>
+  
+          {# Item3 #}        
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                  <span class="flag">BUGS - NYU</span>
+                  <span class="time-wrapper"><span class="time">Feb. 2018 - May 2018</span></span>
+              </div>
+              <div class="desc">NYU programming group. Our goal was to build an e-commerce website using PHP and MySQL, and my role was to make a data model/schema and middleware</div>
+            </div>
+          </li>
+  
+          {# Item4 #}        
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                  <span class="flag">Giv Orange Inc.</span>
+                  <span class="time-wrapper"><span class="time">Jan. 2016 - present</span></span>
+              </div>
+              <div class="desc">I was responsible for searching fundraising strategies and targeting donors based on the excel files</div>
+            </div>
+          </li>
+  
+          {# Item5 #}        
+          <li>
+            <div class="direction-r">
+              <div class="flag-wrapper">
+                  <span class="flag">LikeLion NYU</span>
+                  <span class="time-wrapper"><span class="time">Jan. 2016 - May 2018</span></span>
+              </div>
+              <div class="desc">I have taught over 300 hours of Web development skills</div>
+            </div>
+          </li>
+  
+          {# Item6 #}        
+          <li>
+            <div class="direction-l">
+              <div class="flag-wrapper">
+                  <span class="flag">ROK Army</span>
+                  <span class="time-wrapper"><span class="time">Sept. 2014 - Jun. 2016</span></span>
+              </div>
+              <div class="desc">I was responsible for making clean, intuitive and efficient Excel files for the daily morning meetings of generals</div>
+            </div>
+          </li>
+          {# Item7 #}        
+          <li>
+              <div class="direction-r">
+                <div class="flag-wrapper">
+                  <span class="flag">NYU</span>
+                  <span class="time-wrapper"><span class="time">Sept. 2013 - present</span></span>
+                </div>
+                <div class="desc">Major: <strong>Computer Science</strong> <br>Minor: <strong>Web Development</strong></div>
+              </div>
+            </li>
+    
+            {# Item8 #}        
+            <li>
+              <div class="direction-l">
+                <div class="flag-wrapper">
+                  <span class="flag">Holderness School</span>
+                  <span class="time-wrapper"><span class="time">Sept. 2008 - Sept. 2013</span></span>
+                </div>
+                <div class="desc">I went to Holderness School, a bording school in NH</div>
+              </div>
+            </li>          
+                        
+          
+        </ul>      
+
+      <hr>
     </section>
     <section id='school' >
       <h1>school</h1>
@@ -46,9 +172,8 @@
     </section>
 
   </div>
-</div> 
 
-{% if user.is_authenticated %}
+  {% if user.is_authenticated %}
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">logout</a></p>
 {% else %}
@@ -59,6 +184,9 @@
   <a href="{% url 'social:begin' 'github' %}">Login with Github</a>
   <a href="{% url 'social:begin' 'facebook' %}">Login with FB</a>
 {% endif %}
-<div class="bottom"></div>
+<div class="bottom"></div>  
+</div> 
+
+
 {% endblock %}
 

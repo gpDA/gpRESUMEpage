@@ -2,7 +2,7 @@
 - bootstrap set up
 - landing page
     - navbar & structure : 
-        1. scroll down navb size decrease
+        1. X scroll down navb size decrease X
         2. navigation in the middle as a grid picture (hover scale(1.2))
         3. navigation menu (section is divided by <hr>) 1. Timeline (horizontal) 
             2. school (grid : picture on the left and my poisition on the right and click my position disappears on the job description (courses that I took) appears)  
@@ -23,7 +23,8 @@
 - LATER 
     : subscriber email
 
-- scrollspy
-- fadein
+- X scrollspy X
+- X fadein X
+- registration sidebar
 
 
