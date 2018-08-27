@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    $(".col-img-right-1").hover(function(){
+        $(".overlay-right-1").toggle('slide', {direction: 'right'},500);
+    });
+    $(".col-img-right-2").hover(function(){
+        $(".overlay-right-2").toggle('slide', {direction: 'right'},500);
+    });    
     //scroll event NAV
     var lastScrollTop = 0;
     $(window).scroll(function(){
@@ -16,7 +22,9 @@ $(document).ready(function(){
     }
     lastScrollTop = scroll;
     });
-});   
+    
+});
+//fadein as scroll down
 $(document).on("scroll", function () {
     var pageTop = $(document).scrollTop()
     var pageBottom = pageTop + $(window).height()
