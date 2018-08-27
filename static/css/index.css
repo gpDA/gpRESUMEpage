@@ -9,6 +9,10 @@
 nav{
     background-color: #20415f;
 }
+#placeholder{
+    height: 80px;
+    visibility: hidden;
+}
 a{
     text-decoration: none;
     color:#f9f9f9;
@@ -28,9 +32,6 @@ nav.decrease{
     height: 70px;
     -webkit-transition: 2s; /* Safari */
     transition: 2s;
-}
-.bottom{
-    margin: 1500px;
 }
 .navbar-nav{
     display: flex;
@@ -60,7 +61,6 @@ nav.decrease{
     width: 100%
 }
 .contents{
-    margin-top: 80px;
     background-color: #f9f9f9;
 }
 section{
@@ -71,7 +71,7 @@ section{
 section.fadein{
     
     background-color: aquamarine;
-    margin-bottom: 50px;
+    
     opacity: 1;
     transform: translate(0, 0);
 }
