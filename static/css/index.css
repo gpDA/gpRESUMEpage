@@ -94,3 +94,10 @@ section.fadein{
 .lists strong{
     margin-left: 60px;
 }
+.flag a{
+    color: black;
+    text-decoration: none;
+}
+.flag a:hover{
+    color: #20415f;
+}
