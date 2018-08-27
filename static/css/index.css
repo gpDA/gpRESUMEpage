@@ -20,19 +20,7 @@ a{
 a:hover{
     color: #eee9cd;
 }
-nav.increase{
-    height: 110px;
-    -webkit-transition: 2s; /* Safari */
-    transition: 2s;
-}
-nav.increase img{
-    
-}
-nav.decrease{
-    height: 70px;
-    -webkit-transition: 2s; /* Safari */
-    transition: 2s;
-}
+
 .navbar-nav{
     display: flex;
     flex-grow: 1;
@@ -137,12 +125,12 @@ section.fadein{
 .overlay-right-1, .overlay-right-2{
     position: absolute;
     bottom: 0;
-    left: -625px;
+    left: -750px;
     right: 0;
     background-color: #20415f;
     overflow: hidden;
     display: none;
-    width: 197%;
+    width: 200%;
     height: 100%;
     z-index: 1;
 }
@@ -169,7 +157,7 @@ section.fadein{
     white-space: nowrap;
 }
 .col-img-right-1, .col-img-right-2{
-    right: 10px;
+    right: -50px;
 }
 #projects, #posts{
     flex: 0 1 auto;
@@ -223,4 +211,23 @@ section.fadein{
     display: block;
     margin: 0 auto;
     text-align: center
+}
+.active{
+    background-color: #204668;
+    width: 100%;
+}
+@media (max-width: 992px) {
+    #img-space{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    #nav-img{
+        display: none;
+    }
+}
+@media (max-width : 480px) {
+    .navbar, #placeholder{
+        display: none;
+    }
 }

@@ -5,19 +5,17 @@
 {% block content %}
 
 <nav class="fixed-top navbar navbar-expand-lg increase">
-  <div class="nav-items">
-    <a href="#header">
+  <div class="nav-items" id='nav-img'>
     <img src="{% static 'img/gp.png' %}">
-    </a>
   </div>  
   <div class="nav-items">
-    <a class="nav-link" href="#timeline">TimeLine</a>
+    <a class="nav-link active" href="#timeline" >TimeLine</a>
   </div>
   <div class="nav-items">
     <a class="nav-link" href="#school">School</a>
   </div>
   <div class="nav-items">
-    <a class="nav-link" href="#experience">Work Experience</a>
+    <a class="nav-link" href="#experience">Work</a>
   </div>
   <div class="nav-items">
     <a class="nav-link" href="#projects">Projects</a>
@@ -35,15 +33,15 @@
 <div class="contents">
 
   <div class="container">
-    <section id='header'>
+    <section>
       <div class="row">
-        <div class="col-sm-6" id='img-space'>
+        <div class="col-lg-6" id='img-space'>
             <img id='head-image' src="{% static 'img/header_pic.jpg' %}" alt="">
         </div>
-        <div class="col-sm-6" id='text-space'>
+        <div class="col-lg-6" id='text-space'>
             <h2>GP LEE</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam laborum iusto harum, dolorum facere reprehenderit et nemo debitis molestias velit eaque nostrum optio vitae perferendis assumenda quos. Illum, temporibus necessitatibus. lorem30</p>
-            <svg height="63" width="400">
+            <svg height="63" width="100%">
               <g>
                 <text x="20" y="30" fill="black" style='font: 20px sans-serif'>Programming Skills</text>
                 <text x="310" y="30" fill="black">(strong)</text>

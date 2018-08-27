@@ -1,31 +1,18 @@
 $(document).ready(function(){
-    $(".col-img-right-1").hover(function(){
+    $(".col-img-right-1").hover(function(event){
         $(".overlay-right-1").toggle('slide', {direction: 'right'},500);
+        event.stopPropagation();
     });
-    $(".col-img-right-2").hover(function(){
+    $(".col-img-right-2").hover(function(event){
         $(".overlay-right-2").toggle('slide', {direction: 'right'},500);
+        event.stopPropagation();
     });    
-    //scroll event NAV
-    var lastScrollTop = 0;
-    $(window).scroll(function(){
-    //nav
-    var scroll = $(this).scrollTop();
-    if (scroll > lastScrollTop){
-        
-        $("nav").removeClass("increase").addClass("decrease");
-            $('.nav-items img').animate({height:"65px",width:"80px"}, 30);
-            $('.nav-items').animate({lineHeight:"40px"}, 30);
-    } else {        
-        $("nav").removeClass("decrease").addClass("increase");
-            $('.nav-items img').animate({height:"120px",width:"120px"}, 30);
-            $('.nav-items').animate({lineHeight:"80px"}, 30);
-    }
-    lastScrollTop = scroll;
-    });
     
 });
-//fadein as scroll down
-$(document).on("scroll", function () {
+
+$(document).on("scroll", function (event) {
+    //fadein as scroll down
+
     var pageTop = $(document).scrollTop()
     var pageBottom = pageTop + $(window).height()
     var tags = $("section")
@@ -38,7 +25,22 @@ $(document).on("scroll", function () {
       } else {
         $(tag).removeClass("fadein")
       }
-    }
+    };
+    //underline nav-link as scroll down
+    var scrollPos = $(document).scrollTop();
+    $('.navbar a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $(".navbar a").removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+
+  
   });
     
 
