@@ -119,18 +119,18 @@ section.fadein{
     white-space: nowrap;
   }
 .col-img-left:hover .overlay-left {
-    width: 199%;
+    width: 212%;
 }
 
 .overlay-right-1, .overlay-right-2{
     position: absolute;
     bottom: 0;
-    left: -750px;
+    left: -745px;
     right: 0;
     background-color: #20415f;
     overflow: hidden;
     display: none;
-    width: 200%;
+    width: 195%;
     height: 100%;
     z-index: 1;
 }
@@ -156,9 +156,7 @@ section.fadein{
     transform: translate(-50%, -50%);
     white-space: nowrap;
 }
-.col-img-right-1, .col-img-right-2{
-    right: -50px;
-}
+
 #projects, #posts{
     flex: 0 1 auto;
     display: flex;
@@ -230,4 +228,8 @@ section.fadein{
     .navbar, #placeholder{
         display: none;
     }
+}
+#experience .col-img-left img{
+    width: 300px;
+    height: 300px;
 }

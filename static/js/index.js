@@ -3,10 +3,11 @@ $(document).ready(function(){
         $(".overlay-right-1").toggle('slide', {direction: 'right'},500);
         event.stopPropagation();
     });
+    if ($(window).width() > 768) {
     $(".col-img-right-2").hover(function(event){
         $(".overlay-right-2").toggle('slide', {direction: 'right'},500);
-        event.stopPropagation();
-    });    
+    });
+    };    
     
 });
 
