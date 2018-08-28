@@ -10,8 +10,9 @@ TO RUN THE CODE
 ### - What this repository is
 
     :This is My resume page where I can upload my development work as Project and my study as Posting. 
-    Project is the place where I explain my codes in Projects line by line using snippets and pictures (ckeditor) 
-    and Posting is the place where I post what I have learnt this week using snippets and picutres (ckeditor).
+    Project is the place where I explain my codes in Projects line by line using snippets and 
+    pictures (ckeditor) and Posting is the place where I post what I have learnt this week 
+    using snippets and picutres (ckeditor).
     
 ### - What I try to focus on this project
 
