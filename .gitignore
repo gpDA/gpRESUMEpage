@@ -5,3 +5,4 @@ project/migrations/__pycache__/*
 posting/migrations/__pycache__/*
 lib/*
 bin/*
+requirements.txt
