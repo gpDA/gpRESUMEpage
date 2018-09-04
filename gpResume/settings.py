@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'storages',
     'collectfast',
+    'psycopg2',
 ]
 
 CACHES = {
@@ -61,8 +62,7 @@ AUTH_USER_MODEL = 'posting.CustomUser'
 
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'GP site admin'
-EMAIL_HOST_PASSWORD = 'geonpyung93'
+
 EMAIL_USE_TLS = True
 DEFAULT_FROM_EMAIL = 'GP site <noreply@example.com>'
 
@@ -126,8 +126,12 @@ WSGI_APPLICATION = 'gpResume.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'gpresume',                      
+        'USER': 'geonpyunglee',
+        'PASSWORD': 'geonpyung93',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -172,9 +176,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-"""
-AWS_ACCESS_KEY_ID = 'AKIAJ2WX7NPR4FV6A2VA'
-AWS_SECRET_ACCESS_KEY = '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'
+
+
 AWS_STORAGE_BUCKET_NAME = 'gpresume-static'
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 AWS_S3_OBJECT_PARAMETERS = {
@@ -186,4 +189,4 @@ AWS_LOCATION = 'static'
 STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 DEFAULT_FILE_STORAGE = 'gpResume.storage_backends.MediaStorage' 
-"""
+

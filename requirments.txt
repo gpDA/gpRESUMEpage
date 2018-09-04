@@ -6,6 +6,8 @@
 - pip install boto3 (boto3)
 - pip install django-storages (django-storages)
 - pip install Collectfast
+- pip install python-decouple
+- pip install psycopg2
 - SUPERUSER
     - username : gp
     - password : geonpyung93   
