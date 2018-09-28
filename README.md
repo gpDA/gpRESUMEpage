@@ -1,9 +1,10 @@
 TO RUN THE CODE
-- source ./bin/active
-- PIP INSTALL EVERYTHING IN requirements.txt
-- python manage.py makemigrations
-- python manage.py migrate
-- python manage.py runserver
+
+    source ./bin/active
+    PIP INSTALL EVERYTHING IN requirements.txt
+    python manage.py makemigrations
+    python manage.py migrate
+    python manage.py runserver
 
 * It is now development MODE
 
